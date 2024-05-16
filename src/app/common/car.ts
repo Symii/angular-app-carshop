@@ -11,6 +11,7 @@ export class Car {
     public gearType: string,
     public color: string,
     public damaged: boolean,
-    public description: string
+    public description: string,
+    public images: any
   ) {}
 }

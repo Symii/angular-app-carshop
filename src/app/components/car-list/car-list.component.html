@@ -1,1 +1,19 @@
-<p>car-list works!</p>
+<div class="gallery">
+  <div class="car-list-row">
+    <div *ngFor="let tempCar of cars; let i = index" class="image">
+      <a href="#"></a>
+      <img src="{{ tempCar.images[0].imageUrl }}" />
+      <h5>
+        {{ tempCar.brand }} {{ tempCar.model }} {{ tempCar.carEngine.name }}
+      </h5>
+      <p>
+        {{ tempCar.yearProduced }} · {{ tempCar.mileage }} km ·
+        {{ tempCar.carEngine.capacity }} · {{ tempCar.carEngine.fuelType }}
+      </p>
+      <div class="car-price">
+        <label>{{ tempCar.price }}</label>
+        <label>PLN</label>
+      </div>
+    </div>
+  </div>
+</div>
