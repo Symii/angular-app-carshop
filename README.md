@@ -1,23 +1,28 @@
 # AngularAppCarshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## Opis
+AngularAppCarshop to platforma internetowa służąca do przeglądania ogłoszeń sprzedaży samochodów. Umożliwia użytkownikom przeglądanie dostępnych ofert bez konieczności logowania, a także dodawanie nowych ogłoszeń po zalogowaniu. Dodatkowo, użytkownicy mają możliwość zapisywania wybranych ofert do ulubionych oraz korzystania z funkcji wyszukiwania i filtrowania ofert.
 
-## Development server
+## Funkcje
+1. **Przeglądanie ofert**: Użytkownicy mogą przeglądać dostępne oferty samochodów bez konieczności logowania.
+2. **Dodawanie ogłoszeń**: Zalogowani użytkownicy mogą dodawać nowe ogłoszenia sprzedaży samochodów.
+3. **Zapisywanie do ulubionych**: Użytkownicy mogą zapisywać wybrane oferty do ulubionych, aby łatwo do nich wrócić w przyszłości.
+4. **Wyszukiwanie i filtrowanie**: Aplikacja umożliwia użytkownikom wyszukiwanie i filtrowanie ofert na podstawie różnych kryteriów, takich jak marka, model, cena, rok produkcji itp.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologie
+Aplikacja została zbudowana w oparciu o framework Angular, a dane są pobierane z REST API z wykorzystaniem technologii Spring Boot.
 
-## Code scaffolding
+## Uruchomienie lokalne
+1. **Klonowanie repozytorium**: Sklonuj to repozytorium na swoje lokalne środowisko.
+   ```bash
+   git clone https://github.com/Symii/angular-app-carshop.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Uruchomienie aplikacji**: Przejdź do katalogu z aplikacją i uruchom ją za pomocą narzędzia Angular CLI.
+    ```bash
+    cd AngularAppCarshop
+    ng serve --open
+3. **Przeglądanie**: Aplikacja zostanie uruchomiona i otworzy się automatycznie w przeglądarce internetowej. Jeśli nie, otwórz przeglądarkę i przejdź pod adres
+   
+       http://localhost:4200
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/58b07298-97c2-4c65-8b64-41623f331a98)
