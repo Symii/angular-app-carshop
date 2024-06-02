@@ -1,0 +1,106 @@
+<div
+  *ngIf="filteredCars.length <= 0"
+  class="alert alert-warning col-md-12"
+  role="alert"
+>
+  Nie znaleziono żadnych ogłoszeń z podanymi kryteriami.
+</div>
+
+<div *ngFor="let tempCar of filteredCars; let i = index">
+  <div class="container">
+    <a (click)="scrollToTop()" routerLink="/car-detail/{{ tempCar.id }}"
+      ><div class="car-list-filter-item">
+        <div>
+          <img src="{{ tempCar.images[0].imageUrl }}" />
+        </div>
+        <div>
+          <h5>
+            {{ tempCar.brand }} {{ tempCar.model }} {{ tempCar.carEngine.name }}
+          </h5>
+          <p>
+            {{ tempCar.carEngine.capacity * 1000 }} cm3 ·
+            {{ tempCar.mileage }} km · Krótki tytuł ogłoszenia maksymalnie 100
+            znaków do wykorzystania
+          </p>
+          <p>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ooa-51p4fw"
+            >
+              <path
+                d="m16.474 4 5.897 16.083h-2.13L14.343 4h2.13zm-6.446 0L4.13 20.083H2L7.898 4h2.13zm2.982 11v4h-2v-4h2zm0-4.958v3h-2v-3h2zm0-4.042v2h-2V6h2z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            {{ tempCar.mileage }} km
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ooa-51p4fw"
+            >
+              <path
+                d="m13 2 1 1v7h1c1.206 0 3 .799 3 3v6c.012.449.195 1 1 1 .806 0 .988-.55 1-1.011V6.42l-1.408-1.38H16L15 4l1-.96h3.408L22 5.58V19c0 1.206-.799 3-3 3-2.2 0-3-1.794-3-3v-6c0-.806-.55-.99-1.011-1H14v10H3V3l1-1h9zm-1 2H5v16h7V4zm-1.003 1v4H6V5h4.997z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            {{ tempCar.carEngine.fuelType }}
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ooa-51p4fw"
+            >
+              <path
+                d="M21 5a2 2 0 0 0-4 0c0 .738.405 1.376 1 1.723v3.863l-.414.414H13V6.745A1.991 1.991 0 0 0 14.042 5a2 2 0 0 0-4 0c0 .721.385 1.348.958 1.7V11H6V6.723A1.994 1.994 0 0 0 5 3a1.994 1.994 0 0 0-1 3.723v10.554c-.595.347-1 .984-1 1.723a2 2 0 0 0 4 0c0-.739-.405-1.376-1-1.723V13h5v4.3a1.99 1.99 0 0 0-.958 1.7 2 2 0 0 0 4 0A1.99 1.99 0 0 0 13 17.255V13h5.414L20 11.414v-4.69c.595-.348 1-.986 1-1.724"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            {{ tempCar.gearType }}
+
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ooa-51p4fw"
+            >
+              <path
+                d="M8.006 2v1h8.007V2h2.002v1h2.984L22 4v17l-1 1H3l-1-1V4l1-1h3.004V2h2.002zm11.992 8H4.002v10h15.996V10zM7.505 12a1.5 1.5 0 1 1 .001 3 1.5 1.5 0 0 1 0-3.001zM6.004 5H4.002v3h15.996V5h-1.983v1l-1.001 1-1.001-1V5H8.006v1L7.005 7 6.004 6V5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            {{ tempCar.yearProduced }}
+          </p>
+          <p>
+            Sławno (Zachodniopomorskie)<br />
+            <span>Opublikowano 2 godziny temu</span>
+          </p>
+          <p>Prywatny sprzedawca</p>
+        </div>
+        <div class="car-price">
+          <div>
+            <label>{{ tempCar.price }}</label>
+            <label>PLN</label>
+          </div>
+          <div></div>
+          <div>
+            <p>W granicach średniej</p>
+          </div>
+          <div>
+            <p><a href="">Sprawdz możliwości finansowania</a></p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

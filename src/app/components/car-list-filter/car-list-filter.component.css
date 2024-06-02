@@ -1,0 +1,49 @@
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.car-list-filter-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 15px;
+  background-color: rgb(230, 243, 255);
+  border: 1px solid rgb(0, 74, 139);
+  border-radius: 5px;
+}
+
+.car-list-filter-item div:nth-child(2) {
+  width: 70%;
+}
+
+.car-list-filter-item img {
+  width: 300px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.car-price {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: right;
+}
+
+.car-price label:first-child {
+  color: #000000;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.car-price label:nth-child(2) {
+  color: #000000;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.car-price div {
+  width: 100%;
+}

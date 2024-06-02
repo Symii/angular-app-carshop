@@ -10,58 +10,6 @@
     <link rel="stylesheet" href="assets/css/navigation.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="/"><img src="assets/img/carshop.png" alt="Logo" /></a>
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#" class="button-secondary"
-              ><i class="bi bi-heart-fill"></i> Obserwowane</a
-            >
-          </li>
-
-          <li class="dropdown">
-            <a href="#" class="dropbtn"
-              ><i class="bi bi-person"></i>
-              <label
-                th:if="${#authentication.name != 'anonymousUser'}"
-                th:text="${#authentication.name}"
-                >Anonimowy użytkownik</label
-              >
-              <label
-                th:unless="${#authentication.name != 'anonymousUser'}"
-                th:text="${'Anonimowy użytkownik'}"
-              ></label>
-              <i class="bi bi-caret-down-fill"></i
-            ></a>
-            <div class="dropdown-content">
-              <label>Moje konto</label>
-              <a href="#">Ogłoszenia</a>
-              <a href="#">Wiadomości</a>
-              <a href="#">Ustawienia</a>
-              <br />
-              <label>Obserwowane</label>
-              <a href="#">Ogłoszenia</a>
-              <a href="#">Wyszukiwania</a>
-              <br />
-              <a th:if="${email != null}" th:href="@{/logout}">Wyloguj się</a>
-              <a th:unless="${email != null}" th:href="@{/login}"
-                >Zaloguj się</a
-              >
-            </div>
-          </li>
-
-          <li>
-            <a th:href="@{/osobowe/nowe-ogloszenie}" class="primary-button"
-              ><i class="bi bi-plus"></i> Zacznij sprzedawać</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-
     <app-root></app-root>
     <div th:fragment="newsletter" class="row py-5">
       <div class="col newsletter-form">

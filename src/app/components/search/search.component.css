@@ -1,0 +1,47 @@
+.search-container {
+  background-image: url("../../../assets/img/cars/car-25-1.webp");
+  background-size: 100%;
+  padding-top: 50px;
+  padding-bottom: 250px;
+}
+.search-wrapper {
+  background-color: #efefef;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 50%;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.search-form select {
+  background-color: #d1d9e2;
+  color: black;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+}
+.search-form select {
+  flex: 0 0 22.5% !important;
+  max-width: 22.5% !important;
+  margin-top: 15px;
+}
+.search-form select:nth-child(1),
+.search-form select:nth-child(2) {
+  flex: 0 0 47.5% !important;
+  max-width: 47.5% !important;
+}
+
+.search-form button {
+  margin-left: 50%;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  flex: 0 0 47.5% !important;
+  max-width: 47.5% !important;
+  background-color: #e74783;
+  border: none;
+  border-radius: 2px;
+}

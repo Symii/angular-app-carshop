@@ -2,6 +2,7 @@ import { CarEngine } from './car-engine';
 
 export class Car {
   constructor(
+    public id: number,
     public carEngine: CarEngine,
     public brand: string,
     public model: string,
