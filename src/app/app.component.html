@@ -11,7 +11,7 @@
       </li>
 
       <li class="dropdown">
-        <a href="#" class="dropbtn"
+        <a class="dropbtn"
           ><i class="bi bi-person"></i>
           <label
             th:if="${#authentication.name != 'anonymousUser'}"
@@ -26,21 +26,20 @@
         ></a>
         <div class="dropdown-content">
           <label>Moje konto</label>
-          <a href="#">Ogłoszenia</a>
-          <a href="#">Wiadomości</a>
-          <a href="#">Ustawienia</a>
+          <a routerLink="/moje-konto/ogloszenia">Ogłoszenia</a>
+          <a routerLink="/moje-konto/wiadomosci">Wiadomości</a>
+          <a routerLink="/moje-konto/ustawienia">Ustawienia</a>
           <br />
           <label>Obserwowane</label>
-          <a href="#">Ogłoszenia</a>
-          <a href="#">Wyszukiwania</a>
+          <a routerLink="/obserwowane/ogloszenia">Ogłoszenia</a>
+          <a routerLink="/obserwowane/wyszukiwania">Wyszukiwania</a>
           <br />
-          <a th:if="${email != null}" th:href="@{/logout}">Wyloguj się</a>
-          <a th:unless="${email != null}" th:href="@{/login}">Zaloguj się</a>
+          <a routerLink="/login">Zaloguj się</a>
         </div>
       </li>
 
       <li>
-        <a th:href="@{/osobowe/nowe-ogloszenie}" class="primary-button"
+        <a routerLink="/osobowe/nowe-ogloszenie" class="primary-button"
           ><i class="bi bi-plus"></i> Zacznij sprzedawać</a
         >
       </li>
@@ -48,7 +47,89 @@
   </nav>
 </header>
 <main>
-  <!--<app-search></app-search>
-  <app-car-list></app-car-list>-->
   <router-outlet></router-outlet>
+  <div class="container-fluid justify-content-center">
+    <footer>
+      <div class="row justify-content-around mb-0 pt-5 pb-0">
+        <div class="col-11">
+          <div class="row justify-content-center">
+            <div
+              class="col-md-3 col-12 font-italic align-items-center mt-md-3 mt-4"
+            >
+              <h5>
+                <a th:href="@{/}"
+                  ><span>
+                    <img
+                      src="assets/img/icon.ico"
+                      class="img-fluid mb-1" /></span
+                  ><b class="text-dark">
+                    Car<span class="text-muted"> Shop</span></b
+                  ></a
+                >
+              </h5>
+              <p class="social mt-md-3 mt-2">
+                <span><i class="bi bi-facebook" aria-hidden="true"></i></span>
+                <span><i class="bi bi-linkedin" aria-hidden="true"></i></span>
+                <span><i class="bi bi-twitter" aria-hidden="true"></i></span>
+              </p>
+              <small class="copy-rights cursor-pointer"
+                >&#9400; 2024 Carshop Digital Technologies</small
+              ><br />
+              <small>Copyright.All Rights Reserved. </small>
+            </div>
+            <div class="col-md-3 col-12 my-sm-0 mt-5">
+              <ul class="list-unstyled">
+                <li class="mt-md-3 mt-4">Carshop</li>
+                <li><a routerLink="/pomoc">Pomoc</a></li>
+                <li><a routerLink="/kontakt">Kontakt</a></li>
+                <li>
+                  <a routerLink="/regulamin-dla-klientow-indywidualnych"
+                    >Regulamin dla Klientów Indywidualnych</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/regulamin-dla-klientow-biznesowych"
+                    >Regulamin dla Klientów Biznesowych</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-12 my-sm-0 mt-5">
+              <ul class="list-unstyled">
+                <li class="mt-md-3 mt-4">Przydatne informacje</li>
+                <li>
+                  <a href="/assets/pdf/umowa-sprzedazy.pdf" target="_blank"
+                    >Umowa kupna sprzedaży</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="/cennik"
+                    >Cennik</a
+                  >
+                </li>
+                <li>Mapa kategorii</li>
+                <li>Historia pojazdu</li>
+              </ul>
+            </div>
+            <div class="col-xl-auto col-md-3 col-12 my-sm-0 mt-5">
+              <ul class="list-unstyled">
+                <li class="mt-md-3 mt-4">Pobierz aplikacje</li>
+                <li>
+                  <a href="https://play.google.com/store/apps" target="_blank"
+                    ><img src="assets/img/googlePlay.png" class="footer-img"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://www.apple.com/pl/app-store/" target="_blank"
+                    ><img src="assets/img/appleStore.png" class="footer-img"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </footer>
+  </div>
 </main>

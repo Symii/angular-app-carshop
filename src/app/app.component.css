@@ -1,0 +1,10 @@
+.list-unstyled a:link,
+.list-unstyled a:visited {
+  text-decoration: none;
+  color: #757575;
+}
+
+.list-unstyled a:hover {
+  color: #454545;
+  text-decoration: underline !important;
+}

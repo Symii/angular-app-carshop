@@ -1,0 +1,259 @@
+.osobwe-form input {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #ebecef;
+}
+
+.osobwe-form input:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+  border-bottom: 2px solid #e74783 !important;
+}
+
+h3 {
+  margin-top: 40px;
+}
+h4 {
+  color: #66676c;
+  margin-top: 25px;
+}
+
+.wrapper {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  align-items: left;
+}
+.wrapper label:first-child {
+  margin-right: 50px;
+}
+
+.wrapper .option {
+  background: #fff;
+  height: 30px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #e74783;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+  background-color: #dddddd !important;
+}
+#uszkodzony_nie:checked:checked ~ .option-1,
+#uszkodzony_tak:checked:checked ~ .option-2 {
+  border-color: #e74783;
+  background: #e74783;
+}
+#uszkodzony_nie:checked:checked ~ .option-1 .dot,
+#uszkodzony_tak:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#uszkodzony_nie:checked:checked ~ .option-1 .dot::before,
+#uszkodzony_tak:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+#uszkodzony_nie:checked:checked ~ .option-1 span,
+#uszkodzony_tak:checked:checked ~ .option-2 span {
+  color: #fff;
+}
+
+/**/
+
+#importowany_nie:checked:checked ~ .option-1,
+#importowany_tak:checked:checked ~ .option-2 {
+  border-color: #e74783;
+  background: #e74783;
+}
+#importowany_nie:checked:checked ~ .option-1 .dot,
+#importowany_tak:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#importowany_nie:checked:checked ~ .option-1 .dot::before,
+#importowany_tak:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+#importowany_nie:checked:checked ~ .option-1 span,
+#importowany_tak:checked:checked ~ .option-2 span {
+  color: #fff;
+}
+
+.mileage-input {
+  display: flex;
+}
+.mileage-input input {
+  width: 350px;
+}
+
+.mileage-input span {
+  width: 50px;
+  color: #787878;
+  background-color: #ebecef;
+  border-top: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+}
+.mileage-input input:focus ~ .mileage-input span {
+  box-shadow: none !important;
+  outline-width: 0;
+  border-bottom: 2px solid #e74783 !important;
+  background: #fff;
+}
+
+#przebieg {
+  width: 350px !important;
+}
+
+.input-wrapper select {
+  display: block;
+  width: 400px;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #ebecef;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Styl dla aktywnego selecta */
+.input-wrapper select:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Styl dla wybranych opcji */
+.input-wrapper option {
+  color: #212529;
+  background-color: #fff;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrapper div {
+  width: 400px;
+}
+
+.contact-button {
+  float: right;
+  background-color: #c82814;
+  border: 5px solid #c82814;
+  width: 400px;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.contact-button:hover {
+  background-color: white;
+  color: #c82814;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+/* CUSTOM SELECT*/
+select {
+  background-color: #ebecef !important;
+  color: #495057 !important;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+select:hover {
+  cursor: pointer;
+}
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0.5rem #e74783);
+  border: 2px solid #e74783 !important;
+}
+
+select option {
+  padding: 30px;
+  background-color: #ebecef !important;
+  color: #495057 !important;
+}
+select option:hover {
+  background-color: #ebecef !important;
+}
+
+textarea {
+  background-color: #ebecef;
+  width: 100%;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea:focus {
+  box-shadow: none;
+  border: 2px solid #e74783;
+}
+.select-disabled {
+  background-color: #ebebeb !important;
+}
+.select-disabled:hover {
+  cursor: default;
+}

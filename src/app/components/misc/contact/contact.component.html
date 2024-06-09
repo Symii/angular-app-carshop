@@ -1,0 +1,80 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Kontakt</h2>
+
+  <div class="row">
+    <!-- Formularz kontaktowy -->
+    <div class="col-md-6">
+      <h4>Formularz kontaktowy</h4>
+      <form class="osobwe-form">
+        <div class="form-group">
+          <label for="name">Imię i nazwisko</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Wprowadź swoje imię i nazwisko"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Adres email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Wprowadź swój adres email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject">Temat</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            placeholder="Wprowadź temat wiadomości"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Wiadomość</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="5"
+            placeholder="Wprowadź swoją wiadomość"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+      </form>
+    </div>
+
+    <!-- Informacje o firmie -->
+    <div class="col-md-6">
+      <h4>Informacje o firmie</h4>
+      <p><strong>Nazwa:</strong> Carshop Digital Technologies</p>
+      <p><strong>Telefon:</strong> +48 123 456 789</p>
+      <p><strong>Email:</strong> kontakt&commat;carshop.pl</p>
+      <p><strong>Miejsce:</strong> ul. Przykładowa 1, 76-100 Sławno</p>
+      <p><strong>NIP:</strong> 123-45-67-890</p>
+      <p><strong>REGON:</strong> 123456789</p>
+      <h4>Nasza lokalizacja</h4>
+      <div id="map" style="width: 600px; height: 400px">
+        <iframe
+          width="600"
+          height="400"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=16.6748808%2C54.357613%2C16.6748808%2C54.357613&amp;layer=mapnik&amp;marker=54.357613%2C16.6748808"
+          style="border: 1px solid black"
+        ></iframe
+        ><br /><small
+          ><a
+            href="https://www.openstreetmap.org/?mlat=54.357613&amp;mlon=16.6748808#map=17/54.357613/16.6748808"
+            target="_blank"
+            >Pokaż większą mapę</a
+          ></small
+        >
+      </div>
+    </div>
+  </div>
+</div>

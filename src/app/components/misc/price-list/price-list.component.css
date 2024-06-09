@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+ .plans {
+	 width: 96%;
+	 max-width: 1128px;
+	 margin: 0 auto;
+}
+ .plans__container {
+	 padding: 1rem 0 2rem;
+}
+ .plansHero {
+	 text-align: center;
+	 padding: 5rem 0 4.5rem;
+	 line-height: 1.21;
+}
+ .plansHero__title {
+	 font-weight: 700;
+	 font-size: 2rem;
+	 margin: 0 0 1rem 0;
+	 color: #000;
+}
+ .plansHero__subtitle {
+	 margin: 0;
+}
+ .planItem {
+	 border: 1px solid #e6e6e6;
+	 background-color: #fff;
+	 box-shadow: none;
+	 background-color: white;
+	 border: solid 1px black;
+	 border-radius: 1rem;
+	 padding: 2rem 1.5rem;
+	 display: inline-flex;
+	 flex-direction: column;
+}
+ .planItem__container {
+	 direction: column;
+	 display: flex;
+	 gap: 1.5rem;
+}
+ .planItem .price {
+	 margin: 2rem 0;
+}
+ .planItem--pro {
+	 border: 0;
+	 box-shadow: 0px 14px 30px rgba(204, 204, 204, 0.32);
+	 border: 1px solid black;
+	 background-color: #E74783;
+	 color: white !important;
+	 margin-top: -40px;
+	 margin-bottom: 40px;
+}
+.planItem--pro h2, .planItem--pro .card__desc, .planItem--pro .price {
+	color: white !important;
+}
+.planItem--pro .featureList {
+	color: white;
+}
+.planItem--pro button {
+	background-color: white !important;
+	color: #E74783 !important;
+}
+.planItem--pro .card, .planItem--pro .card__header {
+	background-color: #E74783 !important;
+}
+
+
+
+ .planItem--entp .price, .planItem--entp .featureList {
+	 color: #000;
+}
+
+ .planItem .button {
+	 margin-top: auto;
+}
+ .button {
+	 background-color: var(--pinkLight);
+	 color: white;
+	 --shadowColor: #000;
+	 --outline: var(--pink);
+	 border-radius: 0.5rem;
+	 display: block;
+	 width: 100%;
+	 padding: 1rem 1.5rem;
+	 border: 0;
+	 line-height: inherit;
+	 font-family: inherit;
+	 font-size: 1rem;
+	 font-weight: 600;
+	 background-color: var(background-color);
+	 color: var(color);
+	 cursor: pointer;
+	 transition: all 0.1s ease-in-out;
+	 user-select: none;
+}
+ .button--pink {
+	 background-color: var(--pink);
+	 color: #fff;
+	 --shadowColor: #000;
+}
+ .button--white {
+	 background-color: #fff;
+	 --shadowColor: #000;
+	 --outline: #fff;
+}
+ .button:hover {
+	 transform: translateY(-2px);
+	 box-shadow: 0px 6px 10px #E74783;
+}
+ .button:focus-visible {
+	 outline-offset: 2px;
+	 outline: 2px solid var(--outline);
+}
+ .card {
+	 --titleColor: #000;
+	 --descColor: var(--baseColor);
+	 border: none;
+}
+ .card__header {
+	 display: flex;
+	 gap: 1rem;
+	 align-items: center;
+}
+ .card h2 {
+	 color: var(--titleColor);
+	 font-size: 27px;
+	 line-height: 1.2;
+	 font-weight: 400;
+	 margin: 0;
+	 flex-grow: 1;
+}
+ .card__desc {
+	 margin: 1.5rem 0 0;
+	 color: var(--descColor);
+}
+ .label {
+	 --labelColor: var(--baseColor);
+	 --labelBg: #e5e5e5;
+	 font-weight: 600;
+	 line-height: 1.25;
+	 font-size: 1rem;
+	 text-align: center;
+	 padding: 0.625rem 1.125rem;
+	 border-radius: 2rem;
+	 user-select: none;
+	 background-color: var(--labelBg);
+	 color: var(--labelColor);
+}
+ .price {
+	 color: #000;
+	 --priceMargin: 0;
+	 display: flex;
+	 color: var(color);
+	 align-items: center;
+	 gap: 0.5625rem;
+	 font-weight: 600;
+	 font-size: 2rem;
+	 margin: var(--priceMargin);
+}
+ .price span {
+	 font-size: 1rem;
+	 font-weight: 400;
+	 color: var(--baseColor);
+}
+ .featureList {
+	 color: #000;
+	 --icon: var(--redTick);
+	 --height: 0.875rem;
+	 margin: 0 0 2.75rem;
+	 padding: 0;
+	 font-weight: 500;
+}
+ .featureList li {
+	 color: var(color);
+	 margin-bottom: 2rem;
+	 display: flex;
+	 align-items: center;
+	 gap: 1rem;
+}
+
+ .featureList li:last-child {
+	 margin-bottom: 0;
+}
+ .featureList li.disabled {
+	 color: #b1b8c9;
+	 --height: 1.125rem;
+	 --icon: var(--close);
+}

@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-lg,
+button {
+  background-color: #e74783 !important;
+  border: none !important;
+}
