@@ -1,80 +1,99 @@
-<div class="container mt-5">
-  <h2 class="mb-4">Kontakt</h2>
+<section
+  class="section-bg"
+  style="background-image: url(/assets/img/cars/car-27-1.webp)"
+  data-scroll-index="7"
+>
+  <div class="overlay pt-100 pb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="contact-info">
+            <h2 class="contact-title">Masz jakieś pytania?</h2>
+            <p>
+              Jeśli masz pytania lub potrzebujesz pomocy, skontaktuj się z nami
+            </p>
+            <ul class="contact-info">
+              <li>
+                <div class="info-left">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="info-right">
+                  <h4>123 456 789</h4>
+                </div>
+              </li>
+              <li>
+                <div class="info-left">
+                  <i class="fas fa-at"></i>
+                </div>
+                <div class="info-right">
+                  <h4>kontakt&commat;carshop.pl</h4>
+                </div>
+              </li>
+              <li>
+                <div class="info-left">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-right">
+                  <h4>Sławno 76-100, ul. Przykładowa 41</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="contact-form">
+            <!--Contact Form-->
+            <form id="contact-form">
+              <input type="hidden" name="form-name" value="contactForm" />
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="first-name"
+                      placeholder="Wpisz swoje imie i nazwisko"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Wpisz adres E-mail"
+                      required="required"
+                    />
+                  </div>
+                </div>
 
-  <div class="row">
-    <!-- Formularz kontaktowy -->
-    <div class="col-md-6">
-      <h4>Formularz kontaktowy</h4>
-      <form class="osobwe-form">
-        <div class="form-group">
-          <label for="name">Imię i nazwisko</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="Wprowadź swoje imię i nazwisko"
-          />
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      rows="4"
+                      name="message"
+                      class="form-control"
+                      id="description"
+                      placeholder="W czym możemy pomóc?"
+                      required="required"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <!--contact button-->
+                  <button (click)="onSubmit()" class="btn-big btn btn-bg">
+                    Wyślij <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Adres email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Wprowadź swój adres email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="subject">Temat</label>
-          <input
-            type="text"
-            class="form-control"
-            id="subject"
-            placeholder="Wprowadź temat wiadomości"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Wiadomość</label>
-          <textarea
-            class="form-control"
-            id="message"
-            rows="5"
-            placeholder="Wprowadź swoją wiadomość"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Wyślij</button>
-      </form>
-    </div>
-
-    <!-- Informacje o firmie -->
-    <div class="col-md-6">
-      <h4>Informacje o firmie</h4>
-      <p><strong>Nazwa:</strong> Carshop Digital Technologies</p>
-      <p><strong>Telefon:</strong> +48 123 456 789</p>
-      <p><strong>Email:</strong> kontakt&commat;carshop.pl</p>
-      <p><strong>Miejsce:</strong> ul. Przykładowa 1, 76-100 Sławno</p>
-      <p><strong>NIP:</strong> 123-45-67-890</p>
-      <p><strong>REGON:</strong> 123456789</p>
-      <h4>Nasza lokalizacja</h4>
-      <div id="map" style="width: 600px; height: 400px">
-        <iframe
-          width="600"
-          height="400"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=16.6748808%2C54.357613%2C16.6748808%2C54.357613&amp;layer=mapnik&amp;marker=54.357613%2C16.6748808"
-          style="border: 1px solid black"
-        ></iframe
-        ><br /><small
-          ><a
-            href="https://www.openstreetmap.org/?mlat=54.357613&amp;mlon=16.6748808#map=17/54.357613/16.6748808"
-            target="_blank"
-            >Pokaż większą mapę</a
-          ></small
-        >
       </div>
     </div>
   </div>
-</div>
+</section>

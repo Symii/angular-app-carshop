@@ -21,6 +21,9 @@ import { ContactComponent } from './components/misc/contact/contact.component';
 import { InvidualClientRulesComponent } from './components/misc/invidual-client-rules/invidual-client-rules.component';
 import { BusinessClientRulesComponent } from './components/misc/business-client-rules/business-client-rules.component';
 import { PriceListComponent } from './components/misc/price-list/price-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PhoneScreenComponent } from './components/utils/phone-screen/phone-screen.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -41,8 +44,15 @@ import { PriceListComponent } from './components/misc/price-list/price-list.comp
     InvidualClientRulesComponent,
     BusinessClientRulesComponent,
     PriceListComponent,
+    PhoneScreenComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+  ],
   providers: [CarService],
   bootstrap: [AppComponent],
 })

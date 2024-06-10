@@ -134,6 +134,15 @@
   width: 100%;
 }
 
+.gallery-bottom-info a {
+  color: rgb(65, 105, 225);
+  text-decoration: underline;
+}
+.gallery-bottom-info a:hover {
+  color: rgb(45, 82, 192);
+  cursor: pointer;
+}
+
 .car-info label {
   margin-right: 5px;
 }

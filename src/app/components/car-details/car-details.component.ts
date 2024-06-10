@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Car } from '../../common/car';
 import { CarService } from '../../services/car.service';
 import { ActivatedRoute } from '@angular/router';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { PhoneScreenComponent } from '../utils/phone-screen/phone-screen.component';
+import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-car-details',
@@ -10,8 +13,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarDetailsComponent {
   theCar: Car | undefined;
+  modalRef: BsModalRef | undefined;
+  linkCopied: boolean = false;
 
-  constructor(private carService: CarService, private route: ActivatedRoute) {}
+  constructor(
+    private carService: CarService,
+    private route: ActivatedRoute,
+    private modalService: BsModalService,
+    private clipboardService: ClipboardService
+  ) {}
 
   ngOnInit(): void {
     this.getCar();
@@ -38,5 +48,18 @@ export class CarDetailsComponent {
     this.carService.getCarById(+id).subscribe((data: any) => {
       this.theCar = data;
     });
+  }
+
+  displayPhoneNumber() {
+    this.modalRef = this.modalService.show(PhoneScreenComponent);
+  }
+
+  copyLink() {
+    const linkToCopy: string = window.location.href;
+    this.clipboardService.copyFromContent(linkToCopy);
+    this.linkCopied = true;
+    setTimeout(() => {
+      this.linkCopied = false;
+    }, 3000);
   }
 }

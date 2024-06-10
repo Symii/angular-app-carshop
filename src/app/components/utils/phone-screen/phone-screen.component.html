@@ -1,0 +1,20 @@
+<div class="ekran">
+  <div class="modal-header justify-content-between">
+    <h4 class="modal-title">Numer telefonu</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="closeModal()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Numer telefonu: {{ phoneNumber }}<br />
+    <button class="btn btn-primary" (click)="copyPhoneNumber()">
+      Skopiuj numer telefonu
+    </button>
+    <div *ngIf="copied">Numer telefonu został skopiowany!</div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.ekran {
+  text-align: center;
+  font-size: 19px;
+}
+.ekran button {
+  margin-top: 10px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header button {
+  color: white;
+}

@@ -8,3 +8,7 @@
   color: #454545;
   text-decoration: underline !important;
 }
+
+.social i {
+  padding: 5px;
+}

@@ -14,9 +14,12 @@
     <div class="gallery-bottom-info">
       <label> 24 kwietnia 2024 22:28 </label>
 
-      <a style="float: right" href="#"
+      <a style="float: right" (click)="copyLink()"
         ><i class="bi bi-share"></i> Udostępnij to ogłoszenie</a
       >
+      <div style="float: right; color: #e74783" *ngIf="linkCopied">
+        Skopiowano link ogłoszenia do schowka
+      </div>
     </div>
   </div>
   <div class="car-info">
@@ -88,10 +91,10 @@
         <label>2024</label>
       </p>
 
-      <a href="#" class="contact-button"
+      <a routerLink="/moje-konto/wiadomosci" class="contact-button"
         ><i class="bi bi-envelope-check"></i> Kontakt ze sprzedającym</a
       ><br />
-      <a href="#" class="telephone-button"
+      <a (click)="displayPhoneNumber()" class="telephone-button"
         ><i class="bi bi-telephone"></i> Wyświetl numer</a
       >
     </div>
