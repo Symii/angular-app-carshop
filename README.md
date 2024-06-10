@@ -29,8 +29,8 @@ Aplikacja została zbudowana w oparciu o framework Angular, a dane są pobierane
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/511a9e68-9fcc-404f-8406-b0633e14b59a)
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/c6d12808-8039-4dca-9f7d-c04b38407e8a)
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/45bd331c-7072-4370-b1f9-b0852bcc2fbc)
-![image](https://github.com/Symii/angular-app-carshop/assets/46313859/eb526eed-8791-43c0-b734-c7e845f4d6d4)
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/7a059595-97a8-4aad-befd-c28ac32e2e2e)
+![image](https://github.com/Symii/angular-app-carshop/assets/46313859/eb526eed-8791-43c0-b734-c7e845f4d6d4)
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/a877b0c0-a731-462e-82a8-437a7b5d9796)
 ![image](https://github.com/Symii/angular-app-carshop/assets/46313859/53217a7f-39a1-401e-a23c-8292d28bc1cb)
 
