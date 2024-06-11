@@ -9,12 +9,13 @@ import { Car } from '../common/car';
 export class CarService {
   // http://localhost/api/cars/filter?size=10&brand=audi&priceFrom=80000&priceTo=100000
   private baseUrl = 'http://localhost/api/cars?maxRows=12';
+  private randomUrl = 'http://localhost/api/cars/random';
   private filterUrl = 'http://localhost/api/cars/filter';
 
   constructor(private httpClient: HttpClient) {}
 
   getCarList(): Observable<Car[]> {
-    return this.httpClient.get<Car[]>(this.baseUrl).pipe();
+    return this.httpClient.get<Car[]>(this.randomUrl).pipe();
   }
 
   getCarListFilter(
