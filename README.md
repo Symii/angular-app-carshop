@@ -24,7 +24,8 @@ Aplikacja została zbudowana w oparciu o framework Angular, a dane są pobierane
 
 2. **Uruchomienie aplikacji**: Przejdź do katalogu z aplikacją i uruchom ją za pomocą narzędzia Angular CLI.
     ```bash
-    cd AngularAppCarshop
+    cd angular-app-carshop
+    npm install
     ng serve --open
 3. **Przeglądanie**: Aplikacja zostanie uruchomiona i otworzy się automatycznie w przeglądarce internetowej. Jeśli nie, otwórz przeglądarkę i przejdź pod adres
    
