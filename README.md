@@ -13,6 +13,7 @@ AngularAppCarshop to platforma internetowa służąca do przeglądania ogłosze�
 Aplikacja została zbudowana w oparciu o framework Angular, a dane są pobierane z REST API z wykorzystaniem technologii Spring Boot.
 
 ## Uruchomienie lokalne
+0. **Uruchom SPRING REST API**: [Uruchom lokalnie projekt rest-api spring](https://github.com/Symii/spring-app-carshop)
 1. **Klonowanie repozytorium**: Sklonuj to repozytorium na swoje lokalne środowisko.
    ```bash
    git clone https://github.com/Symii/angular-app-carshop.git
