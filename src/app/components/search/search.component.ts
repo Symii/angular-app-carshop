@@ -9,9 +9,16 @@ import { Router } from '@angular/router';
 export class SearchComponent {
   constructor(private router: Router) {}
 
-  doSearch(brand: string, priceFrom: number, priceTo: number) {
+  doSearch(
+    brand: string,
+    priceFrom: number,
+    priceTo: number,
+    body: string,
+    fuelType: string,
+    yearProducedFrom: number
+  ) {
     this.router.navigateByUrl(
-      `/cars-filtered/${brand}/${priceFrom}/${priceTo}`
+      `/osobowe/lista/${brand}-${body}-${yearProducedFrom}-${priceFrom}-${priceTo}-${fuelType}`
     );
   }
 }

@@ -25,6 +25,9 @@ export class CarListFilterComponent {
     let brand: string = '';
     let priceFrom: number = 0;
     let priceTo: number = 9999999;
+    let body: string = 'sedan';
+    let fuelType: string = 'benzyna';
+    let yearProducedFrom: number = 1900;
 
     console.log(priceFrom);
     console.log(priceTo);
@@ -35,11 +38,25 @@ export class CarListFilterComponent {
       priceFrom = +this.route.snapshot.paramMap.get('priceFrom')!;
     if (this.route.snapshot.paramMap.has('priceTo'))
       priceTo = +this.route.snapshot.paramMap.get('priceTo')!;
+    if (this.route.snapshot.paramMap.has('body'))
+      body = this.route.snapshot.paramMap.get('body')!;
+    if (this.route.snapshot.paramMap.has('fuelType'))
+      fuelType = this.route.snapshot.paramMap.get('fuelType')!;
+    if (this.route.snapshot.paramMap.has('yearProducedFrom'))
+      yearProducedFrom = +this.route.snapshot.paramMap.get('yearProducedFrom')!;
 
     // TODO: work to do pageSize
     let pageSize: number = 100;
     this.carService
-      .getCarListFilter(pageSize, brand, +priceFrom, +priceTo)
+      .getCarListFilter(
+        pageSize,
+        brand,
+        +priceFrom,
+        +priceTo,
+        body,
+        fuelType,
+        yearProducedFrom
+      )
       .subscribe((data: any) => {
         this.filteredCars = data;
       });

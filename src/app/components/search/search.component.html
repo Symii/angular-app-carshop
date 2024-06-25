@@ -16,7 +16,7 @@
           <option>Peugeot</option>
         </select>
         <select #body class="">
-          <option>Typ nadwozia</option>
+          <option value="sedan">Typ nadwozia</option>
           <option>Coupe</option>
           <option>Kabriolet</option>
           <option>Kombi</option>
@@ -52,7 +52,7 @@
         </select>
 
         <select #yearProducedFrom class="">
-          <option>Rok produkcji od</option>
+          <option value="1900">Rok produkcji od</option>
           <option>2024</option>
           <option>2023</option>
           <option>2022</option>
@@ -64,7 +64,7 @@
           <option>2000</option>
         </select>
         <select #fuelType class="">
-          <option>Rodzaj paliwa</option>
+          <option value="Benzyna">Rodzaj paliwa</option>
           <option>Benzyna</option>
           <option>Benzyna+LPG</option>
           <option>Diesel</option>
@@ -73,7 +73,16 @@
           <option>Wodór</option>
         </select>
         <button
-          (click)="doSearch(brand.value, +priceFrom.value, +priceTo.value)"
+          (click)="
+            doSearch(
+              brand.value,
+              +priceFrom.value,
+              +priceTo.value,
+              body.value,
+              fuelType.value,
+              +yearProducedFrom.value
+            )
+          "
           class="btn btn-primary"
         >
           Pokaż 12 329 ogłoszeń

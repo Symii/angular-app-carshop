@@ -17,15 +17,7 @@ import { PriceListComponent } from './components/misc/price-list/price-list.comp
 
 const routes: Routes = [
   {
-    path: 'cars-filtered/:brand/:priceFrom/:priceTo',
-    component: CarListFilterComponent,
-  },
-  {
-    path: 'cars-filtered/:brand/:priceTo',
-    component: CarListFilterComponent,
-  },
-  {
-    path: 'cars-filtered/:brand',
+    path: 'osobowe/lista/:brand-:body-:yearProducedFrom-:priceFrom-:priceTo-:fuelType',
     component: CarListFilterComponent,
   },
   { path: 'car-detail/:id', component: CarDetailsComponent },

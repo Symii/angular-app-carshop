@@ -22,12 +22,19 @@ export class CarService {
     pageSize: number,
     brand: string,
     priceFrom: number,
-    priceTo: number
+    priceTo: number,
+    body: string,
+    fuelType: string,
+    yearProducedFrom: number
   ): Observable<Car[]> {
     let sql = `?size=${pageSize}`;
     if (brand != null) sql += `&brand=${brand}`;
     if (priceFrom != -1) sql += `&priceFrom=${priceFrom}`;
     if (priceTo != -1) sql += `&priceTo=${priceTo}`;
+    if (body != null) sql += `&body=${body}`;
+    if (fuelType != null) sql += `&fuelType=${fuelType}`;
+    if (yearProducedFrom != null)
+      sql += `&yearProducedFrom=${yearProducedFrom}`;
 
     return this.httpClient.get<Car[]>(`${this.filterUrl}${sql}`);
   }
