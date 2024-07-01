@@ -1,0 +1,35 @@
+<div class="chat-history" #scrollableDiv>
+  <ul class="m-b-0">
+    <li class="clearfix">
+      <div class="message-data text-left">
+        <span class="message-data-time">10:10, 20 Czerwca</span>
+      </div>
+      <div class="message other-message">
+        Cześć! Widziałem Twoje ogłoszenie o sprzedaży samochodu. Czy jest
+        jeszcze dostępny?
+      </div>
+    </li>
+    <li *ngFor="let message of messages" class="clearfix">
+      <div class="message-data">
+        <span class="message-data-time">{{ formattedDate }}</span>
+      </div>
+      <div class="message my-message float-right">
+        {{ message }}
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="chat-message clearfix">
+  <div class="input-group mb-0">
+    <input
+      [(ngModel)]="message"
+      type="text"
+      class="form-control"
+      placeholder="Wpisz wiadomość tutaj..."
+      (keyup.enter)="sendMessage()"
+    />
+    <div (click)="sendMessage()" class="input-group-prepend">
+      <span class="input-group-text"><i class="bi bi-send"></i></span>
+    </div>
+  </div>
+</div>
