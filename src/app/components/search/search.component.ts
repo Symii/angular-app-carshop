@@ -18,7 +18,7 @@ export class SearchComponent {
     yearProducedFrom: number
   ) {
     this.router.navigateByUrl(
-      `/osobowe/lista/${brand}-${body}-${yearProducedFrom}-${priceFrom}-${priceTo}-${fuelType}`
+      `/osobowe/lista/${brand}/${body}/${yearProducedFrom}/${priceFrom}/${priceTo}/${fuelType}`
     );
   }
 }

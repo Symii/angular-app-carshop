@@ -17,10 +17,13 @@ import { PriceListComponent } from './components/misc/price-list/price-list.comp
 
 const routes: Routes = [
   {
-    path: 'osobowe/lista/:brand-:body-:yearProducedFrom-:priceFrom-:priceTo-:fuelType',
+    path: 'osobowe/lista/:brand/:body/:yearProducedFrom/:priceFrom/:priceTo/:fuelType',
     component: CarListFilterComponent,
   },
-  { path: 'car-detail/:id', component: CarDetailsComponent },
+  { 
+    path: 'osobowe/oferta/:brand/:carModel/:year/:power/:id',
+    component: CarDetailsComponent 
+  },
   {
     path: 'obserwowane/ogloszenia',
     component: FollowingAnnoucementsComponent,

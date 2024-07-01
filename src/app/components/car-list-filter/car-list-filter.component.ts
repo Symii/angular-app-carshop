@@ -29,8 +29,12 @@ export class CarListFilterComponent {
     let fuelType: string = 'benzyna';
     let yearProducedFrom: number = 1900;
 
-    console.log(priceFrom);
-    console.log(priceTo);
+    console.log("brand " + this.route.snapshot.paramMap.get('brand'));
+    console.log("price from " + this.route.snapshot.paramMap.get('priceFrom'));
+    console.log("price to " + this.route.snapshot.paramMap.get('priceTo'));
+    console.log("body " + this.route.snapshot.paramMap.get('body'));
+    console.log("fuelType " + this.route.snapshot.paramMap.get('fuelType'));
+    console.log("year from " + this.route.snapshot.paramMap.get('yearProducedFrom'));
 
     if (this.route.snapshot.paramMap.has('brand'))
       brand = this.route.snapshot.paramMap.get('brand')!;
