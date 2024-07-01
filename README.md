@@ -16,6 +16,7 @@ Aplikacja została zbudowana w oparciu o framework Angular, a dane są pobierane
 - `Angular CLI: 17.3.7`
 - `Node: 20.9.0`
 - `Package Manager: npm 10.1.0`
+- `Apache Kafka`
 ## Uruchomienie lokalne
 0. **Uruchom SPRING REST API**: [Uruchom lokalnie projekt rest-api spring](https://github.com/Symii/spring-app-carshop)
 1. **Klonowanie repozytorium**: Sklonuj to repozytorium na swoje lokalne środowisko.
