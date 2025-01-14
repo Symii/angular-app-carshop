@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AnnouanceService {
-  private annuanceUrl = 'http://localhost:80/api/annouance/new';
+  private annuanceUrl =
+    'https://spring-app-carshop-production.up.railway.app/api/annouance/new';
 
   constructor(private httpClient: HttpClient) {}
 

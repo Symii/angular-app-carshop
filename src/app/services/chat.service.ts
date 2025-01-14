@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ChatService {
-  private baseUrl = 'http://localhost:80/api/chat';
+  private baseUrl =
+    'https://spring-app-carshop-production.up.railway.app/api/chat';
 
   constructor(private http: HttpClient) {}
 

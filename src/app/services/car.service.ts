@@ -7,10 +7,13 @@ import { Car } from '../common/car';
   providedIn: 'root',
 })
 export class CarService {
-  // http://localhost/api/cars/filter?size=10&brand=audi&priceFrom=80000&priceTo=100000
-  private baseUrl = 'http://localhost/api/cars?maxRows=12';
-  private randomUrl = 'http://localhost/api/cars/random';
-  private filterUrl = 'http://localhost/api/cars/filter';
+  // https://spring-app-carshop-production.up.railway.app/api/cars/filter?size=10&brand=audi&priceFrom=80000&priceTo=100000
+  private baseUrl =
+    'https://spring-app-carshop-production.up.railway.app/api/cars?maxRows=12';
+  private randomUrl =
+    'https://spring-app-carshop-production.up.railway.app/api/cars/random';
+  private filterUrl =
+    'https://spring-app-carshop-production.up.railway.app/api/cars/filter';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -40,6 +43,8 @@ export class CarService {
   }
 
   getCarById(theId: number): Observable<Car> {
-    return this.httpClient.get<Car>(`http://localhost/api/cars/${theId}`);
+    return this.httpClient.get<Car>(
+      `https://spring-app-carshop-production.up.railway.app/api/cars/${theId}`
+    );
   }
 }
