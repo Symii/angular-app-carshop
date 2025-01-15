@@ -8,7 +8,16 @@
 
 <div *ngFor="let tempCar of filteredCars; let i = index">
   <div class="container">
-    <a (click)="scrollToTop()" routerLink="/car-detail/{{ tempCar.id }}"
+    <a
+      (click)="scrollToTop()"
+      [routerLink]="[
+        '/osobowe/oferta',
+        tempCar.brand,
+        tempCar.model,
+        tempCar.yearProduced,
+        tempCar.carEngine.horsePower,
+        tempCar.id
+      ]"
       ><div class="car-list-filter-item">
         <div>
           <img src="{{ tempCar.images[0].imageUrl }}" />
