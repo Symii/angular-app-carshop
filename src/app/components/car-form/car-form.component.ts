@@ -13,6 +13,7 @@ import { CarEngine } from '../../common/car-engine';
 import { Car } from '../../common/car';
 import { AnnouanceCar } from '../../common/annouance-car';
 import { Annouance } from '../../common/annouance';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-car-form',
@@ -22,12 +23,14 @@ import { Annouance } from '../../common/annouance';
 export class CarFormComponent {
   productionYears: number[] = [];
   checkoutFormGroup: FormGroup;
+  selectedFile: File | null = null;
 
   constructor(
     private formBuilder: FormBuilder,
     private carFormService: CarFormService,
     private annouanceService: AnnouanceService,
-    private router: Router
+    private router: Router,
+    private httpClient: HttpClient
   ) {
     this.checkoutFormGroup = this.formBuilder.group({
       mainFeatures: this.formBuilder.group({
@@ -88,6 +91,13 @@ export class CarFormComponent {
     });
   }
 
+  onFileChange(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFile = file;
+    }
+  }
+
   ngOnInit(): void {
     this.carFormService.getCarYears().subscribe((data) => {
       this.productionYears = data;
@@ -111,6 +121,7 @@ export class CarFormComponent {
     const technical = this.checkoutFormGroup.controls['technical'].value;
     const other = this.checkoutFormGroup.controls['other'].value;
     const mainFeatures = this.checkoutFormGroup.controls['mainFeatures'].value;
+    const basic = this.checkoutFormGroup.controls['basic'].value;
 
     const horsePower = technical.horsePower;
     const capacity = technical.capacity;
@@ -124,11 +135,12 @@ export class CarFormComponent {
     );
     const brand = technical.brand;
     const model = technical.model;
-    const yearProduced = technical.yearProduced;
-    const mileage = technical.mileage;
+    const yearProduced = technical.productionYear;
+    const mileage = basic.mileage;
     const gearType = technical.gearType;
+    const body = technical.bodyType;
     const price = other.price;
-    const color = other.color;
+    const color = technical.color;
     const description = other.description;
     const damaged = mainFeatures.damaged;
 
@@ -141,12 +153,25 @@ export class CarFormComponent {
       gearType,
       color,
       damaged,
-      description
+      description,
+      body
     );
     let annouance: Annouance = new Annouance(carEngine, customer, car);
 
     this.annouanceService.addAnnouance(annouance).subscribe({
       next: (response) => {
+        if (this.selectedFile) {
+          const formData = new FormData();
+          formData.append('file', this.selectedFile, this.selectedFile.name);
+          formData.append('link', response.annouanceLink);
+
+          this.httpClient
+            .post(
+              'https://spring-app-carshop-production.up.railway.app/api/upload',
+              formData
+            )
+            .subscribe();
+        }
         this.router.navigateByUrl(response.annouanceLink);
         scrollTo(0, 0);
       },

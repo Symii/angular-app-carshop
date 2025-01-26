@@ -1,6 +1,10 @@
 <div class="col-12 col-sm-10 col-md-7 offset-sm-1 mt-5">
   <h2 class="text-left mb-4">Dodaj ogłoszenie</h2>
-  <form class="osobwe-form" [formGroup]="checkoutFormGroup">
+  <form
+    class="osobwe-form"
+    [formGroup]="checkoutFormGroup"
+    enctype="multipart/form-data"
+  >
     <div class="form-group">
       <label for="rodzaj_pojazdu">Rodzaj pojazdu:</label>
       <select
@@ -466,7 +470,7 @@
         </div>
       </div>
     </div>
-    <h4>Zdjęcia <span>(0/10)</span></h4>
+    <h4>Zdjęcia <span>(0/1)</span></h4>
     <div formGroupName="other">
       <div class="form-group">
         <input
@@ -476,6 +480,7 @@
           name="zdjecia[]"
           id="zdjecia"
           multiple
+          (change)="onFileChange($event)"
         />
         <div
           class="invalid-input"

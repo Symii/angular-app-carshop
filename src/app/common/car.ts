@@ -13,6 +13,7 @@ export class Car {
     public color: string,
     public damaged: boolean,
     public description: string,
+    public body: string,
     public images: any
   ) {}
 }

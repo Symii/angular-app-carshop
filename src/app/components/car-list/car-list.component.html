@@ -2,16 +2,24 @@
 <div class="gallery">
   <div class="car-list-row">
     <div *ngFor="let tempCar of cars; let i = index" class="image">
-      <a (click)="scrollToTop()" 
-      [routerLink]="['/osobowe/oferta', tempCar.brand, tempCar.model, tempCar.yearProduced, 
-      tempCar.carEngine.horsePower, tempCar.id]"></a>
+      <a
+        (click)="scrollToTop()"
+        [routerLink]="[
+          '/osobowe/oferta',
+          tempCar.brand,
+          tempCar.model,
+          tempCar.yearProduced,
+          tempCar.carEngine.horsePower,
+          tempCar.id
+        ]"
+      ></a>
       <img src="{{ tempCar.images[0].imageUrl }}" />
       <h5>
         {{ tempCar.brand }} {{ tempCar.model }} {{ tempCar.carEngine.name }}
       </h5>
       <p>
         {{ tempCar.yearProduced }} · {{ tempCar.mileage }} km ·
-        {{ tempCar.carEngine.capacity * 1000 }} cm3 ·
+        {{ tempCar.carEngine.capacity }} cm3 ·
         {{ tempCar.carEngine.fuelType }}
       </p>
       <div class="car-price">
