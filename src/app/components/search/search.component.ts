@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarService } from '../../services/car.service';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +8,27 @@ import { Router } from '@angular/router';
   styleUrl: './search.component.css',
 })
 export class SearchComponent {
-  constructor(private router: Router) {}
+  public carCount: number = 0;
+  public carBrands: string[] = [];
+
+  constructor(private carService: CarService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.listCarBrands();
+    this.getCarCount();
+  }
+
+  getCarCount() {
+    this.carService.getCarCount().subscribe((data) => {
+      this.carCount = data;
+    });
+  }
+
+  listCarBrands() {
+    this.carService.getCarBrandList().subscribe((data) => {
+      this.carBrands = data;
+    });
+  }
 
   doSearch(
     brand: string,

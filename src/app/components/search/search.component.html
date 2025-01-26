@@ -4,16 +4,9 @@
       <form class="search-form">
         <select #brand class="">
           <option value="any">Marka pojazdu</option>
-          <option>BMW</option>
-          <option>Volkswagen</option>
-          <option>Audi</option>
-          <option>Ford</option>
-          <option value="Mercedes">Mercedes-Benz</option>
-          <option>Opel</option>
-          <option>Toyota</option>
-          <option>Skoda</option>
-          <option>Renault</option>
-          <option>Peugeot</option>
+          <option *ngFor="let brand of carBrands" value="{{ brand }}">
+            {{ brand }}
+          </option>
         </select>
         <select #body class="">
           <option value="sedan">Typ nadwozia</option>
@@ -85,7 +78,7 @@
           "
           class="btn btn-primary"
         >
-          Pokaż 12 329 ogłoszeń
+          Pokaż {{ carCount | number : "0.0-0" }} ogłoszeń
         </button>
       </form>
     </div>

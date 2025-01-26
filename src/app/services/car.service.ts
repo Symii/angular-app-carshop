@@ -9,13 +9,23 @@ import { Car } from '../common/car';
 export class CarService {
   // https://spring-app-carshop-production.up.railway.app/api/cars/filter?size=10&brand=audi&priceFrom=80000&priceTo=100000
   private baseUrl =
-    'https://spring-app-carshop-production.up.railway.app/api/cars?maxRows=12';
+    'https://spring-app-carshop-production.up.railway.app/api/cars/';
   private randomUrl =
     'https://spring-app-carshop-production.up.railway.app/api/cars/random';
   private filterUrl =
     'https://spring-app-carshop-production.up.railway.app/api/cars/filter';
+  private brandsUrl = this.baseUrl + 'brands';
+  private carCountUrl = this.baseUrl + 'count';
 
   constructor(private httpClient: HttpClient) {}
+
+  getCarCount(): Observable<number> {
+    return this.httpClient.get<number>(this.carCountUrl).pipe();
+  }
+
+  getCarBrandList(): Observable<string[]> {
+    return this.httpClient.get<string[]>(this.brandsUrl).pipe();
+  }
 
   getCarList(): Observable<Car[]> {
     return this.httpClient.get<Car[]>(this.randomUrl).pipe();

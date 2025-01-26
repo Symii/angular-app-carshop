@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CarListComponent } from './components/car-list/car-list.component';
 import { CarService } from './services/car.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './components/search/search.component';
 import { CarListFilterComponent } from './components/car-list-filter/car-list-filter.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
@@ -25,6 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PhoneScreenComponent } from './components/utils/phone-screen/phone-screen.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ChatComponent } from './components/chat/chat.component';
+import { LoadingComponent } from './components/utils/loading/loading.component';
+import { LoadingInterceptor } from './intercepetors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { ChatComponent } from './components/chat/chat.component';
     PriceListComponent,
     PhoneScreenComponent,
     ChatComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,10 @@ import { ChatComponent } from './components/chat/chat.component';
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
-  providers: [CarService],
+  providers: [
+    CarService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

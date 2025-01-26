@@ -10,7 +10,6 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class CarListComponent {
   public cars: Car[] = [];
-
   constructor(private carService: CarService, private router: Router) {}
 
   ngOnInit(): void {
